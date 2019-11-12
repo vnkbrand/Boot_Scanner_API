@@ -4,7 +4,7 @@ const geocoder = require("../utils/geocoder");
 const Bootcamp = require("../models/Bootcamp");
 
 //  @desc     Get all bootcamps
-//  @route    GET /api/vi/bootcamps
+//  @route    GET /api/v1/bootcamps
 // @access    Public
 exports.getBootcamps = asyncHandler(async (req, res, next) => {
   let query;
@@ -78,7 +78,7 @@ exports.getBootcamps = asyncHandler(async (req, res, next) => {
 });
 
 //  @desc     Get single bootcamp
-//  @route    GET /api/vi/bootcamps/:id
+//  @route    GET /api/v1/bootcamps/:id
 // @access    Public
 exports.getBootcamp = asyncHandler(async (req, res, next) => {
   const bootcamp = await Bootcamp.findById(req.params.id);
@@ -93,7 +93,7 @@ exports.getBootcamp = asyncHandler(async (req, res, next) => {
 });
 
 //  @desc     Create new bootcamp
-//  @route    POST /api/vi/bootcamps
+//  @route    POST /api/v1/bootcamps
 // @access    Private
 exports.createBootcamp = asyncHandler(async (req, res, next) => {
   const bootcamp = await Bootcamp.create(req.body);
@@ -105,7 +105,7 @@ exports.createBootcamp = asyncHandler(async (req, res, next) => {
 });
 
 //  @desc     Update bootcamp
-//  @route    PUT /api/vi/bootcamps/:id
+//  @route    PUT /api/v1/bootcamps/:id
 // @access    Private
 exports.updateBootcamp = asyncHandler(async (req, res, next) => {
   const bootcamp = await Bootcamp.findByIdAndUpdate(req.params.id, req.body, {
@@ -123,7 +123,7 @@ exports.updateBootcamp = asyncHandler(async (req, res, next) => {
 });
 
 //  @desc     Delete bootcamp
-//  @route    DELETE /api/vi/bootcamps/:id
+//  @route    DELETE /api/v1/bootcamps/:id
 // @access    Private
 exports.deleteBootcamp = asyncHandler(async (req, res, next) => {
   const bootcamp = await Bootcamp.findByIdAndDelete(req.params.id);
@@ -138,7 +138,7 @@ exports.deleteBootcamp = asyncHandler(async (req, res, next) => {
 });
 
 //  @desc     Get bootcamps within a radius
-//  @route    GET /api/vi/bootcamps/radius/:zipcode/:distance
+//  @route    GET /api/v1/bootcamps/radius/:zipcode/:distance
 // @access    Private
 exports.getBootcampsInRadius = asyncHandler(async (req, res, next) => {
   const { zipcode, distance } = req.params;
