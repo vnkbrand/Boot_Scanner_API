@@ -1,27 +1,117 @@
-# Dependencies
+# BootScanner API
 
-express, dotenv, nodemon
+Backend, full CRUD API for finding, creating, updating, reviewing bootcamps and courses.
 
-# Routes
+## Initialize App
 
-1. Create route logic in controllers/bootcamps.js
+### Run in dev mode
+npm run dev
 
-2. Create actual routes in routes/bootcamps.js
+### Run in prod mode
+npm start
 
-# Middleware
+## Database Seeder
 
-- Functions that have access to req, res cycle and can manage the logic between those two cycles.
+### Destroy all data
+node seeder -d
 
-The middleware will be used to validate a token that is sent in. If validated, then we set a user { req.user }. We then use that user to do Private functions within the API.
+### Import all data
+node seeder -i
 
-# Database
+# API Specifications
 
-1. Setup MongoDB Atlas
-2. Setup MongoDB Compass Desktop App
-3. Connect the above
-4. npm i mongoose
-5. Create config/db.js
+## Bootcamps
 
-- Setup mongoose
-- Add Compass App URI to config.env as an env variable
-- Connect app to MongoDB
+### List all bootcamps in the database
+
+### Search bootcamps by radius from zipcode
+- Use a geocoder to get exact location and coords from a single address field
+### Get single bootcamp
+
+### Create new bootcamp
+- Authenticated users 
+- "publisher" or "admin"
+
+### Upload photos
+- Local upload
+
+### Update bootcamps
+- Authenticated users
+
+### Delete Bootcamp
+- Authenticated users
+
+### Calculate the average cost of all courses
+
+### Calculate the average rating from the reviews
+
+
+## Courses
+
+### List all courses for bootcamp
+
+### List all courses for all bootcamps
+
+### List single course
+
+### Create a course
+- Authenticated users
+- "publisher" or "admin"
+- Publishers can create >1 course
+
+### Update course
+- Authenticated users
+
+### Delete course
+- Authenticated users
+
+
+## Reviews
+
+### List all reviews for a single bootcamp
+
+### List all reviews for all bootcamps
+
+### List a single review
+
+### Create a review
+- Authenticated users
+- "user" or "admin" (no publishers)
+
+### Update review
+- Authenticated users
+
+### Delete review
+- Authenticated users
+
+
+## Users & Authentication
+- Authentication is done through JWT/cookies
+- JWT and cookie should expire in 30 days
+
+### User registration
+- Either register as a "user" or "publisher"
+- Token sent alongside a cookie
+- Passwords are hashed
+
+### User login
+- Email & Password
+- Once hashed password validated, JWT & Cookie provided
+
+### User logout
+- Cookie will be sent to set token as 'none'.
+
+### Get user
+- Current logged-in user route
+
+### Password reset
+- Hashed token will be emailed to the users registered email address
+A put request can be made to the generated url to reset password
+The token will expire after 10 minutes
+
+### Update user info
+- Authenticated users
+- Separate route to update password
+- User CRUD
+- Admin only
+- Users can only be made admin by updating the database field manually

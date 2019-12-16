@@ -1,0 +1,587 @@
+{
+	"id": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+	"name": "BootScanner API",
+	"description": "Backend API for the BootScanner application to manage bootcamps, courses, reviews, users and authentication.",
+	"order": [],
+	"folders": [
+		{
+			"name": "Authentication",
+			"description": "Routers for user authentication including register, login, reset password etc.",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"order": [
+				"28a83b14-c9c6-f6c7-d0d5-9bfcf598fa24",
+				"6d440e0f-9df5-de6c-6469-3455a0059887",
+				"6fda541a-c943-2839-440d-09640ce1af15"
+			],
+			"owner": "2879083",
+			"folders_order": [],
+			"id": "50d6ba25-6a4d-1f5e-be0f-a8053c4e8def"
+		},
+		{
+			"name": "Bootcamps",
+			"description": "Bootcamps CRUD functionality",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"order": [
+				"7830bb65-69d3-b7b3-c058-91d7d1327d6e",
+				"1ebb5e6d-1567-5e21-d4eb-fd7c14fb11b8",
+				"838db214-87c5-080c-b375-d7778fb74c9b",
+				"ba581218-1062-2a42-d690-16b6e6fe2c66",
+				"35cafe1d-2d7d-6234-3e4b-3238be5acb0d",
+				"ee84eb5a-a692-851b-ec0a-64fc44c431a3",
+				"b5b3b6c3-58c0-1ed0-5e8b-7b9fba4f755b"
+			],
+			"owner": "2879083",
+			"folders_order": [],
+			"id": "ba6b88c2-605e-0dbb-104f-6cf42e4a2e12"
+		},
+		{
+			"name": "Courses",
+			"description": "Create, read, update and delete courses",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"order": [
+				"5a8adab3-5863-1cac-1e29-1f4464527fe1",
+				"82f4268d-b98e-bc81-d630-3c5df2927e16",
+				"e76eb775-133a-4c33-af1f-325e08fac0c3",
+				"0d62fd27-06e3-e06b-fd08-c48c3ab06cca",
+				"1105d0d0-04b5-4a54-2f08-7af57db07e6c",
+				"cf71888f-6f11-7292-ddeb-d509abdc5daa"
+			],
+			"owner": "2879083",
+			"folders_order": [],
+			"id": "ac15682e-0259-3e05-301e-99c60286e290"
+		}
+	],
+	"folders_order": [
+		"ba6b88c2-605e-0dbb-104f-6cf42e4a2e12",
+		"ac15682e-0259-3e05-301e-99c60286e290",
+		"50d6ba25-6a4d-1f5e-be0f-a8053c4e8def"
+	],
+	"timestamp": 1571646015517,
+	"owner": "2879083",
+	"public": false,
+	"requests": [
+		{
+			"id": "0d62fd27-06e3-e06b-fd08-c48c3ab06cca",
+			"headers": "Content-Type: application/json\n//limit: 2\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "limit",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "{{URL}}/api/v1/bootcamps/5d725a1b7b292f5f8ceff788/courses",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Create Course",
+			"description": "Create a course for a specific bootcamp.",
+			"descriptionFormat": "html",
+			"time": 1573717754966,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ac15682e-0259-3e05-301e-99c60286e290",
+			"rawModeData": "{\n\t\"title\": \"Front End Web Development\",\n\t\"description\": \"This course will provide you with all of the essentials to become a successful frontend web developer. You will learn to master HTML, CSS and front end JavaScript, along with tools like Git, VSCode and front end frameworks like Vue\",\n\t\"weeks\": 8,\n\t\"tuition\": 8000,\n\t\"minimumSkill\": \"beginner\",\n\t\"scholarhipsAvailable\": true\n}"
+		},
+		{
+			"id": "1105d0d0-04b5-4a54-2f08-7af57db07e6c",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "JSON Type",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/api/v1/courses/5d725c84c4ded7bcb480eaa0",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Update Course",
+			"description": "Update single course in database",
+			"descriptionFormat": "html",
+			"time": 1574302965249,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ac15682e-0259-3e05-301e-99c60286e290",
+			"rawModeData": "{\n\t\"tuition\": 13000,\n\t\"minimumSkill\": \"advanced\"\n}"
+		},
+		{
+			"id": "1ebb5e6d-1567-5e21-d4eb-fd7c14fb11b8",
+			"headers": "",
+			"headerData": [],
+			"url": "{{URL}}/api/v1/bootcamps/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get single Bootcamp",
+			"description": "Get single bootcamp by ID.",
+			"descriptionFormat": "html",
+			"time": 1571646231561,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ba6b88c2-605e-0dbb-104f-6cf42e4a2e12"
+		},
+		{
+			"id": "28a83b14-c9c6-f6c7-d0d5-9bfcf598fa24",
+			"headers": "//page: 2\n//limit: 2\n",
+			"headerData": [
+				{
+					"key": "page",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "limit",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "{{URL}}/api/v1/auth/register",
+			"folder": "50d6ba25-6a4d-1f5e-be0f-a8053c4e8def",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "pm.environment.set(\"TOKEN\", pm.response.json().token)",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1575445516599,
+			"name": "Register User",
+			"description": "Add user to database with encrypted password",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"responses": []
+		},
+		{
+			"id": "35cafe1d-2d7d-6234-3e4b-3238be5acb0d",
+			"headers": "",
+			"headerData": [],
+			"url": "{{URL}}/api/v1/bootcamps/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"data": null,
+			"dataMode": "params",
+			"name": "Delete a bootcamp",
+			"description": "Delete a bootcamp from the database.\n\nMust be authenticated.\n\nIt must be publisher or admin. ",
+			"descriptionFormat": "html",
+			"time": 1571646349303,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ba6b88c2-605e-0dbb-104f-6cf42e4a2e12"
+		},
+		{
+			"id": "5a8adab3-5863-1cac-1e29-1f4464527fe1",
+			"headers": "//page: 2\n//limit: 2\n",
+			"headerData": [
+				{
+					"key": "page",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "limit",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "{{URL}}/api/v1/courses",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get all Courses",
+			"description": "Get all courses in database.",
+			"descriptionFormat": "html",
+			"time": 1573547983710,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ac15682e-0259-3e05-301e-99c60286e290"
+		},
+		{
+			"id": "6d440e0f-9df5-de6c-6469-3455a0059887",
+			"headers": "//page: 2\n//limit: 2\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "page",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "limit",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "JSON Type",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/api/v1/auth/login",
+			"folder": "50d6ba25-6a4d-1f5e-be0f-a8053c4e8def",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "pm.environment.set(\"TOKEN\", pm.response.json().token)",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1575445565673,
+			"name": "Login User",
+			"description": "Login user and assign a jwt token",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\": \"brandon@gmail.com\",\n\t\"password\": \"123456\"\n}"
+		},
+		{
+			"id": "6fda541a-c943-2839-440d-09640ce1af15",
+			"headers": "//page: 2\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZTRiMzc0ZGRiNGExNGNlOGE0YjI2YyIsImlhdCI6MTU3NTQ0NDYzMSwiZXhwIjoxNTc4MDM2NjMxfQ.TgKymwky_R3231QVpcM88yAl-SgbEoIEloZd9_IGiW4\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "page",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZTRiMzc0ZGRiNGExNGNlOGE0YjI2YyIsImlhdCI6MTU3NTQ0NDYzMSwiZXhwIjoxNTc4MDM2NjMxfQ.TgKymwky_R3231QVpcM88yAl-SgbEoIEloZd9_IGiW4",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "JSON Type",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/api/v1/auth/me",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Get Logged in User",
+			"description": "Get the user via the token",
+			"descriptionFormat": "html",
+			"time": 1575444787351,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "50d6ba25-6a4d-1f5e-be0f-a8053c4e8def",
+			"rawModeData": "{\n\t\"email\": \"brandon@gmail.com\",\n\t\"password\": \"123456\"\n}"
+		},
+		{
+			"id": "7830bb65-69d3-b7b3-c058-91d7d1327d6e",
+			"headers": "//page: 2\n//limit: 2\n",
+			"headerData": [
+				{
+					"key": "page",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "limit",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "{{URL}}/api/v1/bootcamps",
+			"folder": "ba6b88c2-605e-0dbb-104f-6cf42e4a2e12",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1573547952463,
+			"name": "Get all Bootcamps",
+			"description": "Fetch all bootcamps from database. Includes pagination, filtering etc.",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"responses": []
+		},
+		{
+			"id": "82f4268d-b98e-bc81-d630-3c5df2927e16",
+			"headers": "//page: 2\n//limit: 2\n",
+			"headerData": [
+				{
+					"key": "page",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "limit",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "{{URL}}/api/v1/bootcamps/5d713995b721c3bb38c1f5d0/courses",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get Courses for Bootcamp",
+			"description": "Get the specific courses for a bootcamp",
+			"descriptionFormat": "html",
+			"time": 1573548483271,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ac15682e-0259-3e05-301e-99c60286e290"
+		},
+		{
+			"id": "838db214-87c5-080c-b375-d7778fb74c9b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "JSON Type",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/api/v1/bootcamps",
+			"folder": "ba6b88c2-605e-0dbb-104f-6cf42e4a2e12",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1571738415882,
+			"name": "Create Bootcamp",
+			"description": "Add new bootcamp to database.\n\nMust be authenticated.\n\nIt must be publisher or admin. ",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"responses": [],
+			"rawModeData": "{\n\t\"name\": \"Devcentral Bootcamp\",\n\t\"description\": \"Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development\",\n\t\"website\": \"https://devcentral.com\",\n\t\"phone\": \"(444) 444-4444\",\n\t\"email\": \"enroll@devcentral.com\",\n\t\"address\": \"45 Upper College Rd Kingston RI 02881\",\n\t\"careers\": [\n\t\t\"Mobile Development\",\n\t\t\"Web Development\",\n\t\t\"Data Science\",\n\t\t\"Business\"\n\t],\n\t\"housing\": false,\n\t\"jobAssistance\": true,\n\t\"jobGuarantee\": true,\n\t\"acceptGi\": true\n}"
+		},
+		{
+			"id": "b5b3b6c3-58c0-1ed0-5e8b-7b9fba4f755b",
+			"headers": "",
+			"headerData": [],
+			"url": "{{URL}}/api/v1/bootcamps/5d713a66ec8f2b88b8f830b8/photo",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Upload Photo",
+			"description": "Route to upload a bootcamp photo",
+			"descriptionFormat": "html",
+			"time": 1574308129435,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ba6b88c2-605e-0dbb-104f-6cf42e4a2e12",
+			"rawModeData": ""
+		},
+		{
+			"id": "ba581218-1062-2a42-d690-16b6e6fe2c66",
+			"headers": "",
+			"headerData": [],
+			"url": "{{URL}}/api/v1/bootcamps/fgfdd",
+			"folder": "ba6b88c2-605e-0dbb-104f-6cf42e4a2e12",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1574308099688,
+			"name": "Update Bootcamp",
+			"description": "Update single bootcamp in database. \n\nMust be authenticated.\n\nIt must be publisher or admin. ",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "cf71888f-6f11-7292-ddeb-d509abdc5daa",
+			"headers": "//Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "JSON Type",
+					"enabled": false
+				}
+			],
+			"url": "{{URL}}/api/v1/courses/5d725c84c4ded7bcb480eaa0",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Delete Course",
+			"description": "Remove a single course from the database",
+			"descriptionFormat": "html",
+			"time": 1574303125437,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ac15682e-0259-3e05-301e-99c60286e290",
+			"rawModeData": ""
+		},
+		{
+			"id": "e76eb775-133a-4c33-af1f-325e08fac0c3",
+			"headers": "//page: 2\n//limit: 2\n",
+			"headerData": [
+				{
+					"key": "page",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "limit",
+					"value": "2",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "{{URL}}/api/v1/courses/5d725cb9c4ded7bcb480eaa1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get Single Course",
+			"description": "Get a single course by its ID.",
+			"descriptionFormat": "html",
+			"time": 1573716960905,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ac15682e-0259-3e05-301e-99c60286e290"
+		},
+		{
+			"id": "ee84eb5a-a692-851b-ec0a-64fc44c431a3",
+			"headers": "",
+			"headerData": [],
+			"url": "{{URL}}/api/v1/bootcamps/radius/02118/500",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "eab8d495-ee2f-8057-1073-6510c51ee9fc",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get Bootcamps By Distance",
+			"description": "Get bootcamps within a radius of a specific zipcode",
+			"descriptionFormat": "html",
+			"time": 1573525605159,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ba6b88c2-605e-0dbb-104f-6cf42e4a2e12"
+		}
+	]
+}
